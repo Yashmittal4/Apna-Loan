@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 1.4vh 5vw;
+    border-bottom: 0.4px solid #ffffff3a;
+    background-color: #000;
+}
+.logo{
+    width: 5vw;
+}
+.simpleflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.midnav ul {
+    gap: 4vw;
+    
+    list-style: none;
+ 
+}
+.midnav ul li{
+    font-size: 1.6vw;
+}
+.loginbtnnav{
+    border: none;
+    color: #fff;
+    background-color: #ffffff00;
+    font-size: 1.6vw;
+}
+.startedbtnnav{
+    border: none;
+    background-color: #2B892E;
+    color: #fff;
+    border-radius: 2vw;
+    padding:  1.8vh 1.4vw;
+    font-size: 1.4vw;
+}
+.o{
+    
+    border: 12px solid #fff;
+  background-color: #ffffff00;
+  padding: 0 3vw;
+  font-size: 3vw;
+  border-radius: 2vw;
+  position: relative;
+  top: -3vh;
+}
+.rightnav{
+    gap:1.5vw;
+}
+.herocontainer{
+    flex-direction: column;
+    gap: 2vh;
+    align-items: baseline;
+    color: #fff;
+    padding: 30vh 0 2vh 4vw;
+}
+.hero{
+    background: url('./images/m2.png') no-repeat top ;
+    background-size: cover;
+    height: 110vh;
+}
+.upperherocontainer{
+    background-color: #0000006e;
+    color: #ffffffb8;
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
+    border-radius: 3vw;
+    border: 0.2px solid #ffffff20;
+}
+.headingherocontainer{
+    color: #fff;
+    font-size: 3vw;
+}
+.descherocontainer{
+    font-size: 1.65vw;
+    color:#ffffffb8 ;
+    margin-bottom: 2vh;
+}
+.btnherocontainer button{
+    border: none;
+    background-color: #2B892E;
+    color: #fff;
+    border-radius: 2vw;
+    padding:  2vh 2vw;
+    font-size: 1.6vw;
+
+}
+.upperfeaturesconatiner{
+    flex-direction: column;
+    padding: 3vh 0;
+    gap: 2vh;
+}
+.featuresconatiner{
+    padding: 2vh 2vw;
+    color: #fff;
+    background-color: #000000;
+}
+.descupperfeaturesconatiner{
+    color: #ffffffb8;
+    font-size: 1.65vw;
+    text-align: center;
+    width: 70%;
+    padding: 3vh 0;
+
+}
+.upperdownfeaturesconatiner{
+    gap: 1.7vw;
+}
+.leftupperdownfeaturesconatiner{
+    width: 60%;
+    border-radius: 1.5vw;
+}
+.headingupperfeaturesconatiner{
+    font-size: 2.8vw;
+    text-align: center;
+    width: 55%;
+}
+.upperleftupperdownfeaturesconatiner{
+    background:url('./images/bg2.png') no-repeat ;
+    padding: 3vh 0 ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+.oneupperleftupperdownfeaturesconatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 1vw;
+    border-radius: 1.5vw;
+    background-color: #202020;
+
+    gap: 2vw;
+}
+.downleftupperdownfeaturesconatiner{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1vh 3vw;
+    height: 23vh;
+
+    background-color: #111;
+    flex-direction: column;
+    
+}
+.rightupperdownfeaturesconatiner{
+    width:40%;
+
+}
+.upperrightupperdownfeaturesconatiner{
+    background: url('./images/bg2.png') no-repeat top;
+    background-size: cover;
+    padding: 3vh 0 3vh 4vw;
+    gap: 2vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.setfeaturebox{
+    /* height: 50vh; */
+}
+.featsubhead{
+    font-size: 2vw;
+    padding: 2vh 0;
+
+}
+.featsubdesc{
+    font-size: 1.3vw;
+    padding: 1vh 0 2vh 0;
+}
+.downfeaturesconatiner{
+    flex-direction: column;
+    gap: 5vh;
+}
+.sidefeat{
+    border-top-left-radius:2vw;
+    border-top-right-radius:0vw;
+    border-bottom-right-radius:0vw;
+    border-bottom-left-radius:2vw;
+}
+.sidefeat2{
+    border-top-left-radius:0vw;
+    border-top-right-radius:2vw;
+    border-bottom-right-radius:2vw;
+    border-bottom-left-radius:0vw;
+    flex-direction: row-reverse;
+
+}
+.downsetinnerfeact{
+    align-items: flex-start;
+    padding: 3vh 0;
+}
