@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Loan -Login</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./userdataauthmain.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="leftnav" data-aos="fade-up" data-aos-duration="800">
+            <img class="logo" src="./images/logo3.png" alt="" >
+
+           </div>
+           <div class="midnav" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+            <ul class="simpleflex">
+
+                <li>
+                    <a href="./index.html">Home</a>
+                    </li>
+                <li>About</li>
+                <li>Take Loan</li>
+                <li>Services</li>
+                <li>Collabrate</li>
+                
+            </ul>
+
+           </div>
+           <div class="rightnav simpleflex" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+            <a href="./login.html">
+
+                <button class="loginbtnnav">
+                    Login
+                    
+                </button>
+            </a>
+            <button class="startedbtnnav">Get Started</button>
+
+           </div>
+        </nav>
+    </header>
+    <div class="login-container">
+        <div class="hero-section">
+            <img src="./images/bg2.png" alt="Bank building facade" class="hero-image">
+            <div class="hero-content">
+                <h1 class="hero-title">AlphaDebit</h1>
+                <p class="hero-description">
+                    Banking Platform for College Students. AlphaDebit is tailored to ensuring students
+                    spend their money wisely and attempt to save.
+                </p>
+            </div>
+        </div>
+        <div class="form-section">
+            <div class="form-container">
+                <h2 class="form-title">Sign In</h2>
+                <p class="form-subtitle">Sign in to add account details.</p>
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="password" class="form-input" required>
+                            <button type="button" id="togglePassword" class="password-toggle">
+                                <img src="./images/eye.png" alt="Toggle password visibility" class="eye-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="submit-button">Sign In</button>
+                </form>
+                <p class="signup-prompt">
+                    Do not have an account? <a href="./signup.html" class="signup-link">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const togglePasswordButton = document.getElementById('togglePassword');
+
+            togglePasswordButton.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                
+                
+                this.querySelector('img').src = type === 'password' 
+                    ? './images/eye.png' 
+                    : './images/eye2.png';
+            });
+
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                
+                console.log('Login attempted with:', {
+                    email: emailInput.value,
+                    password: passwordInput.value
+                });
+
+                
+                alert('Login functionality would be implemented here.');
+            });
+        });
+    </script>
+</body>
+</html>

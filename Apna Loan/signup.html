@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Loan -Sign Up</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./userdataauth.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="leftnav" data-aos="fade-up" data-aos-duration="800">
+            <img class="logo" src="./images/logo3.png" alt="" >
+
+           </div>
+           <div class="midnav" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+            <ul class="simpleflex">
+
+                <li>
+                    <a href="./index.html">Home</a>
+                    </li>
+                <li>About</li>
+                <li>Take Loan</li>
+                <li>Services</li>
+                <li>Collabrate</li>
+                
+            </ul>
+
+           </div>
+           <div class="rightnav simpleflex" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+            <a href="./login.html">
+
+                <button class="loginbtnnav">
+                    Login
+                    
+                </button>
+            </a>
+            <button class="startedbtnnav">Get Started</button>
+
+           </div>
+        </nav>
+    </header>
+    <div class="signup-container">
+        <div class="hero-section">
+            <img src="./images/bg2.png" alt="Bank building facade" class="hero-image">
+            <div class="hero-content">
+                <h1 class="hero-title">AlphaDebit</h1>
+                <p class="hero-description">
+                    Banking Platform for College Students. AlphaDebit is tailored to ensuring students
+                    spend their money wisely and attempt to save.
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="role-selection">
+                <h2 class="role-title">Tell Your Role</h2>
+                <div class="role-options">
+                    <div class="role-option" data-role="MMSE">
+                        <img src="./images/rs1.png" alt="MMSE" class="role-image">
+                        <p class="role-name">MMSE</p>
+                    </div>
+                    <div class="role-option" data-role="Lender">
+                        <img src="./images/rs2.png" alt="Lender" class="role-image">
+                        <p class="role-name">Lender</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-container">
+                <h2 class="form-title">Sign Up</h2>
+                <p class="form-subtitle">Create your account to get started.</p>
+                <form id="signupForm" class="signup-form">
+                    <div class="form-group">
+                        <label for="role" class="form-label">Role</label>
+                        <select id="role" class="form-select" required>
+                            <option value="">Select your role</option>
+                            <option value="MMSE">MMSE</option>
+                            <option value="Lender">Lender</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="password" class="form-input" required>
+                            <button type="button" id="togglePassword" class="password-toggle">
+                                <img src="/placeholder.svg?height=20&width=20" alt="Toggle password visibility" class="eye-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" id="address" class="form-input" required>
+                    </div>
+                    <button type="submit" class="submit-button">Sign Up</button>
+                </form>
+                <p class="login-prompt">
+                    Already have an account? <a href="./login.html" class="login-link">Log in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const roleSelection = document.querySelector('.role-selection');
+            const formContainer = document.querySelector('.form-container');
+            const signupForm = document.getElementById('signupForm');
+            const roleSelect = document.getElementById('role');
+            const passwordInput = document.getElementById('password');
+            const togglePasswordButton = document.getElementById('togglePassword');
+            const roleOptions = document.querySelectorAll('.role-option');
+
+            roleOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const role = this.getAttribute('data-role');
+                    roleSelect.value = role;
+                    roleSelection.style.display = 'none';
+                    formContainer.style.display = 'block';
+                });
+            });
+
+            togglePasswordButton.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                
+                this.querySelector('img').src = type === 'password' 
+                    ? './images/eye.png' 
+                    : './images/eye2.png';
+            });
+
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    role: roleSelect.value,
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    password: passwordInput.value,
+                    phone: document.getElementById('phone').value,
+                    address: document.getElementById('address').value
+                };
+
+                console.log('Sign up attempted with:', formData);
+                alert('Sign up functionality would be implemented here.');
+            });
+        });
+    </script>
+</body>
+</html>
