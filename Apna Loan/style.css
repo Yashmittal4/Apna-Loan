@@ -1,7 +1,15 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style:normal;
+    /* overflow-x :hidden; */
+}
+main{
+  overflow-x:hidden;
 }
 header{
   position: sticky;
@@ -17,6 +25,13 @@ nav{
     border-bottom: 0.4px solid #ffffff17;
     background-color: #000;
     
+
+}
+.midnav ul li a{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  /* font-size: 2vw; */
 }
 .logo{
     width: 5vw;
@@ -32,7 +47,7 @@ nav{
     list-style: none;
  
 }
-.midnav ul li{
+.midnav ul li {
     font-size: 1.6vw;
 }
 .loginbtnnav{
@@ -40,6 +55,7 @@ nav{
     color: #fff;
     background-color: #ffffff00;
     font-size: 1.6vw;
+    cursor: pointer;
 }
 .startedbtnnav{
     border: none;
@@ -331,7 +347,7 @@ nav{
     width: 6.5vw;
 }
 
-.image-container1 {
+.image-container2 {
     position: relative;
     width: 200px;
     height: 200px;
@@ -340,7 +356,7 @@ nav{
     transition: transform 0.7s;
   }
   
-  .image-container1 span {
+  .image-container2 span {
     position: absolute;
     top: 0;
     left: 0;
@@ -348,7 +364,7 @@ nav{
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
   }
   
-  .image-container1 span img {
+  .image-container2 span img {
     position: absolute;
     left: 0;
     top: 0;
@@ -593,3 +609,9 @@ nav{
   background-color: #ffffff7b;
   color: #000000c2;
 }
+
+
+
+
+
+
