@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApnaLoan - MMSE Loan Application</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./loan.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="leftnav" data-aos="fade-up" data-aos-duration="800">
+            <img class="logo" src="./images/logo3.png" alt="" >
+
+           </div>
+           <div class="midnav" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+            <ul class="simpleflex">
+
+                <li>
+                    <a href="./index.html">Home</a>
+                    </li>
+                <li>About</li>
+                <li>
+                    <a href="./loan.html">Take Loan</a>
+                    </li>
+                <li>Services</li>
+                <li><a href="./collab.html">Collabrate</a>
+                    </li>
+                
+            </ul>
+
+           </div>
+           <div class="rightnav simpleflex" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+            <a href="./login.html">
+
+                <button class="loginbtnnav">
+                    Login
+                    
+                </button>
+            </a>
+            <button class="startedbtnnav">Get Started</button>
+
+           </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>MMSE Loan Application</h1>
+        <div class="form-container">
+            <div class="timeline">
+                <div class="timeline-item active" data-step="1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-text">Personal Information</div>
+                </div>
+                <div class="timeline-item" data-step="2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-text">Company Information</div>
+                </div>
+                <div class="timeline-item" data-step="3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-text">Financial Information</div>
+                </div>
+                <div class="timeline-item" data-step="4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-text">Loan Details</div>
+                </div>
+            </div>
+            <form id="loanApplicationForm">
+                <div class="form-section active" data-step="1">
+                    <h2>Personal Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="aadhaar">Aadhaar Number</label>
+                            <input type="text" id="aadhaar" name="aadhaar" required pattern="[0-9]{12}" title="Please enter a valid 12-digit Aadhaar number">
+                        </div>
+                        <div class="form-group">
+                            <label for="pan">PAN Number</label>
+                            <input type="text" id="pan" name="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="Please enter a valid 10-character PAN number">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section" data-step="2">
+                    <h2>Company Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" id="companyName" name="companyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="businessType">Business Type</label>
+                            <select id="businessType" name="businessType" required>
+                                <option value="">Select business type</option>
+                                <option value="micro">Micro Enterprise</option>
+                                <option value="small">Small Enterprise</option>
+                                <option value="medium">Medium Enterprise</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="industryType">Industry</label>
+                            <input type="text" id="industryType" name="industryType" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="yearsInBusiness">Years in Business</label>
+                            <input type="number" id="yearsInBusiness" name="yearsInBusiness" min="0" step="0.5" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="numEmployees">Number of Employees</label>
+                            <input type="number" id="numEmployees" name="numEmployees" min="1" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="businessDescription">Business Description</label>
+                            <textarea id="businessDescription" name="businessDescription" rows="4" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section" data-step="3">
+                    <h2>Financial Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="annualRevenue">Annual Revenue (Last Year)</label>
+                            <input type="number" id="annualRevenue" name="annualRevenue" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="monthlyRevenue">Average Monthly Revenue</label>
+                            <input type="number" id="monthlyRevenue" name="monthlyRevenue" min="0" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="monthlyExpenses">Average Monthly Expenses</label>
+                            <input type="number" id="monthlyExpenses" name="monthlyExpenses" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="outstandingLoans">Outstanding Loans</label>
+                            <input type="number" id="outstandingLoans" name="outstandingLoans" min="0" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section" data-step="4">
+                    <h2>Loan Details</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="loanAmount">Requested Loan Amount</label>
+                            <input type="number" id="loanAmount" name="loanAmount" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loanTerm">Loan Term (in months)</label>
+                            <input type="number" id="loanTerm" name="loanTerm" min="1" max="60" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="loanPurpose">Loan Purpose</label>
+                            <select id="loanPurpose" name="loanPurpose" required>
+                                <option value="">Select loan purpose</option>
+                                <option value="expansion">Business Expansion</option>
+                                <option value="equipment">Equipment Purchase</option>
+                                <option value="workingCapital">Working Capital</option>
+                                <option value="inventory">Inventory</option>
+                                <option value="refinancing">Debt Refinancing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="collateral">Collateral (if any)</label>
+                            <textarea id="collateral" name="collateral" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="button" id="prevBtn" class="btn btn-secondary hidden">Previous</button>
+                    <button type="button" id="nextBtn" class="btn">Next</button>
+                </div>
+            </form>
+        </div>
+        <div id="creditScore" class="credit-score hidden"></div>
+    </div>
+    <script src="./loan.js"></script>
+
+    
+</body>
+</html>
