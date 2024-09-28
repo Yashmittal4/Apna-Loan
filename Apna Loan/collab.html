@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APNA LOAN - Collaborator Form</title>
+    <link rel="stylesheet" href="./css/collab.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="leftnav" data-aos="fade-up" data-aos-duration="800">
+                <img class="logo" src="./images/logo3.png" alt="">
+            </div>
+            <div class="midnav" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <ul class="simpleflex">
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./calculator.html">Calculate</a>
+                    </li>
+                    <li>
+                        <a href="./loan.html">Take Loan</a>
+                    </li>
+                    <li>Services</li>
+                    <li><a href="./collab.html">Collabrate</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="rightnav simpleflex" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                <a href="./login.html">
+                    <button class="loginbtnnav">Login</button>
+                </a>
+                <button class="startedbtnnav">Get Started</button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="timeline">
+            <div class="timeline-item active">
+                <div class="timeline-dot">1</div>
+                <div class="timeline-text">User Type</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot">2</div>
+                <div class="timeline-text">Personal Info</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot">3</div>
+                <div class="timeline-text">Financial Info</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot">4</div>
+                <div class="timeline-text">Bank Details</div>
+            </div>
+        </div>
+        <div class="form-container">
+            <h1 class="form-title">AlphaDebit Collaborator Form</h1>
+            <form id="collaboratorForm">
+                <div class="form-step" data-step="1">
+                    <div class="form-group">
+                        <label for="userType" class="form-label">Select User Type*</label>
+                        <select id="userType" name="userType" class="form-select" required>
+                            <option value="">Choose an option</option>
+                            <option value="bank">Bank</option>
+                            <option value="individual">Individual</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div id="bankFields" style="display: none;">
+                        <div class="form-group">
+                            <label for="bankRegistered" class="form-label">Is the bank registered?*</label>
+                            <select id="bankRegistered" name="bankRegistered" class="form-select">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-step" data-step="2" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name*</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name*</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address*</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-step" data-step="3" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="minLoanAmount" class="form-label">Minimum Loan Amount*</label>
+                                <input type="number" id="minLoanAmount" name="minLoanAmount" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="maxLoanAmount" class="form-label">Maximum Loan Amount*</label>
+                                <input type="number" id="maxLoanAmount" name="maxLoanAmount" class="form-input" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="minInterestRate" class="form-label">Minimum Interest Rate (%)*</label>
+                                <input type="number" id="minInterestRate" name="minInterestRate" class="form-input" step="0.01" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="maxInterestRate" class="form-label">Maximum Interest Rate (%)*</label>
+                                <input type="number" id="maxInterestRate" name="maxInterestRate" class="form-input" step="0.01" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="collateralRequirement" class="form-label">Collateral Requirement*</label>
+                        <input type="text" id="collateralRequirement" name="collateralRequirement" class="form-input" required placeholder="e.g., 20% of loan amount">
+                    </div>
+                </div>
+                <div class="form-step" data-step="4" style="display: none;">
+                    <div class="form-group">
+                        <label for="bankName" class="form-label">Bank Name*</label>
+                        <input type="text" id="bankName" name="bankName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bankDescription" class="form-label">Bank Description*</label>
+                        <textarea id="bankDescription" name="bankDescription" class="form-textarea" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="bankQuery" class="form-label">Any Query</label>
+                        <textarea id="bankQuery" name="bankQuery" class="form-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="prevBtn" class="btn btn-secondary" style="display: none;">Previous</button>
+                    <button type="button" id="nextBtn" class="btn btn-primary">Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./collab.js"></script>
+</body>
+</html>
