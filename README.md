@@ -121,9 +121,9 @@ Ensure you have the following installed:
 We welcome contributions! Follow these steps to get involved:
 
 1. **Fork the Project**
-2. **Create a Feature Branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit Your Changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push to Branch** (`git push origin feature/AmazingFeature`)
+2. **Create a Feature Branch** 
+3. **Commit Your Changes**
+4. **Push to Branch** 
 5. **Open a Pull Request**
 
 ---
